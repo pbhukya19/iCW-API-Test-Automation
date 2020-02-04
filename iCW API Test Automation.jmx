@@ -467,9 +467,6 @@ if(!(loanId.equals(&quot;&quot;))){
 }
 vars.put(&quot;loanID&quot;, props.get(&quot;loanID&quot;));
 
-//Refreshing dynamic variables from CSV file
-vars.put(&quot;payload&quot;, &quot;&quot;);
-vars.put(&quot;inputVar&quot;, &quot;&quot;);
 
 
 //Response Code from every request sent
@@ -482,7 +479,13 @@ log.info(&quot;\nResponse Headers:\n&quot; + &quot;----------------\n&quot; + sa
 log.info(&quot;\nResponse Data:\n&quot; + &quot;----------------\n&quot; + sampRes.getResponseDataAsString() + &quot;\n--------------------------\n&quot;);
 
 
+
 log.info(&quot;========================================================================&quot;);
+
+
+//Refreshing dynamic variables from CSV file
+vars.put(&quot;payload&quot;, &quot;&quot;);
+vars.put(&quot;inputVar&quot;, &quot;&quot;);
 
 
 </stringProp>
