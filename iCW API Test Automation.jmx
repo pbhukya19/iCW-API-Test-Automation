@@ -571,7 +571,7 @@ vars.put(&quot;inputVar&quot;, &quot;&quot;);
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">AssertionOutput.csv</stringProp>
+          <stringProp name="filename">AssertionReport.csv</stringProp>
         </ResultCollector>
         <hashTree/>
         <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
@@ -674,7 +674,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 //Reading assertion output file for email
-String csvFile = &quot;AssertionOutput.csv&quot;;
+String csvFile = &quot;AssertionReport.csv&quot;;
 BufferedReader bufferedReader = null;
 
 //Write the contents to .eml file
