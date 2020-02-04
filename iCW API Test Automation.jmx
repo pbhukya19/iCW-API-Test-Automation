@@ -86,7 +86,7 @@ vars.put(&quot;random9&quot;, rand.substring(4, 13));//9 digits</stringProp>
         </WhileController>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-            <stringProp name="filename">C:/JMeter/apache-jmeter-5.2.1/Project/ICW API Test Automation/Input CSV File.csv</stringProp>
+            <stringProp name="filename">Input CSV File.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">isMPayload,reqName,reqMethod,host,requestUrl,payload,inputVar</stringProp>
             <boolProp name="ignoreFirstLine">true</boolProp>
@@ -568,7 +568,7 @@ log.info(&quot;=================================================================
               <connectTime>true</connectTime>
             </value>
           </objProp>
-          <stringProp name="filename">C:\JMeter\apache-jmeter-5.2.1\Project\ICW API Test Automation\AssertionOutput.csv</stringProp>
+          <stringProp name="filename">AssertionOutput.csv</stringProp>
         </ResultCollector>
         <hashTree/>
         <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
@@ -671,11 +671,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 //Reading assertion output file for email
-String csvFile = &quot;C:/JMeter/apache-jmeter-5.2.1/Project/ICW API Test Automation/AssertionOutput.csv&quot;;
+String csvFile = &quot;AssertionOutput.csv&quot;;
 BufferedReader bufferedReader = null;
 
 //Write the contents to .eml file
-File file = new File(&quot;C:/JMeter/apache-jmeter-5.2.1/Project/ICW API Test Automation/ReportEmail.eml&quot;);
+File file = new File(&quot;ReportEmail.eml&quot;);
 file.createNewFile();
 FileWriter writer = new FileWriter(file); 
 
@@ -782,7 +782,7 @@ finally {
           <stringProp name="SMTPSampler.include_timestamp">false</stringProp>
           <stringProp name="SMTPSampler.message">${body}</stringProp>
           <stringProp name="SMTPSampler.plainBody">false</stringProp>
-          <stringProp name="SMTPSampler.attachFile">C:\JMeter\apache-jmeter-5.2.1\Project\AssertionOutput.csv</stringProp>
+          <stringProp name="SMTPSampler.attachFile">AssertionOutput.csv</stringProp>
           <stringProp name="SMTPSampler.useSSL">false</stringProp>
           <stringProp name="SMTPSampler.useStartTLS">true</stringProp>
           <stringProp name="SMTPSampler.trustAllCerts">false</stringProp>
@@ -791,7 +791,7 @@ finally {
           <stringProp name="SMTPSampler.trustStoreToUse"></stringProp>
           <stringProp name="SMTPSampler.tlsProtocols"></stringProp>
           <boolProp name="SMTPSampler.use_eml">true</boolProp>
-          <stringProp name="SMTPSampler.emlMessageToSend">C:\JMeter\apache-jmeter-5.2.1\Project\ICW API Test Automation\ReportEmail.eml</stringProp>
+          <stringProp name="SMTPSampler.emlMessageToSend">ReportEmail.eml</stringProp>
           <stringProp name="SMTPSampler.useAuth">true</stringProp>
           <stringProp name="SMTPSampler.password">Test@icw</stringProp>
           <stringProp name="SMTPSampler.username">icwapitest@gmail.com</stringProp>
