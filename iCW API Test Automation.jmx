@@ -86,7 +86,7 @@ vars.put(&quot;random9&quot;, rand.substring(4, 13));//9 digits</stringProp>
         </WhileController>
         <hashTree>
           <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
-            <stringProp name="filename">Input CSV File.csv</stringProp>
+            <stringProp name="filename">InputAPI.csv</stringProp>
             <stringProp name="fileEncoding"></stringProp>
             <stringProp name="variableNames">isMPayload,reqName,reqMethod,host,requestUrl,payload,inputVar</stringProp>
             <boolProp name="ignoreFirstLine">true</boolProp>
@@ -736,7 +736,7 @@ try {
 		counter++;
     }
 
-    body = body + &quot;&lt;/tbody&gt;&lt;/table&gt;&lt;br/&gt;For Logs - &lt;a href=&apos;http://localhost:8080/job/GIT%20API%20Test/ws/jmeter.log/*view*/&apos;&gt;please click here&lt;/a&gt;&lt;/body&gt;&lt;/html&gt;&quot;;
+    body = body + &quot;&lt;/tbody&gt;&lt;/table&gt;&lt;br/&gt;For Logs - &lt;a href=&apos;http://localhost:8080/job/GIT%20API%20Test/ws/jmeter.log/*view*/&apos;&gt;please click here&lt;/a&gt;&lt;/body&gt;&lt;/html&gt;\n&quot;;
 
           // Writes the content to the file
       writer.write(body); 

@@ -1,0 +1,63 @@
+Request Type	Request Name	Request Method	Server	Path	Payload	Variable that needs to be replaced in payload
+init	App Authentication Request	POST	uiuat.dsodentist.com	/api/security/auth/v2/authenticateApp	{"appId": "iCW_iOS","appPwd": "hWYhTmtRGymuohgAU9Ck"}
+icwr	Create User	POST	uiuat.dsodentist.com	/api/security/v2/user	{"userName": "icw.<myparam1>@autotest1.com","password": "Password1","email": "icw.<myparam1>@autotest1.com","firstName": "icw","lastName": "user","mobileNumber": "9999999999"}	random
+icwr	Authenticate for APP Login	POST	uiuat.dsodentist.com	/api/security/auth/v2/authenticateApp	{"appId": "iCW_iOS","appPwd": "hWYhTmtRGymuohgAU9Ck"}
+icwr	User Login	POST	uiuat.dsodentist.com	/api/security/auth/v2/login	{"isThirdPartyLogin": false,"userName": "billyj@cooldude.com","password": "Password1"}
+icwr	Get Current User	GET	uiuat.dsodentist.com	/api/security/v1/currentuser
+icwr	Admin Get Simple Profile by Id	GET	adminuat.dsodentist.com	/api/security/admin/v2/profile/simple/3d60ddcf-00c0-11ea-8517-02212244e7f7?view=(device)
+icwr	Admin Get Simple Profile by Device ID	GET	adminuat.dsodentist.com	/api/security/admin/v2/device/A0DCBA7E-F374-404A-9ECE-B8AC5ABC116F
+icwr	Re-Authenticate	POST	uiuat.dsodentist.com	/api/security/auth/v2/reAuth	{"password": "Password1"}
+icwr	Update Current User V2	PATCH	uiuat.dsodentist.com	/api/security/v2/currentuser	{"profilePicFile": [],"updateUserProfileRequest": "{\n\t\"lastName\":\"NewUser\"\n}"}
+icwr	Renew Login	POST	uiuat.dsodentist.com	/api/security/auth/v2/renewToken	{"appId": "iCW_iOS","appPwd": "hWYhTmtRGymuohgAU9Ck","refreshToken":"<myparam1>"}	refreshToken
+icwr	Logout	POST	uiuat.dsodentist.com	/api/security/auth/v2/logout	{"accessToken":"<myparam1>"}	accessToken
+icwr	iCW-Identify User	POST	uiuat.dsodentist.com	/api/security/auth/v2/user/billyj@cooldude.com	{"last4SSN": "4445","dob": "01/01/1981"}
+icwr	iCW-Reset Password	POST	uiuat.dsodentist.com	/api/security/auth/v2/user/password-reset	{"token": "<myparam1>","permPassword": "Password1"}	passwordResetToken
+icwr	Mobile Validation - GET OTP	GET	uiuat.dsodentist.com	/api/security/v1/otp/token	{"tokenType": "mobile_validation","phoneNumber": "7321111111"}
+icwr	Mobile Validation - Validate OTP	POST	uiuat.dsodentist.com	/api/security/v1/phone/verification	{"tokenType": "mobile_validation","phoneNumber": "7321111111","otp": "<myparam1>"}	mobileOTP
+icwr	Authenticate - App Login	POST	uiuat.dsodentist.com	/api/security/auth/v2/authenticateApp	{"appId": "iCW_iOS","appPwd": "hWYhTmtRGymuohgAU9Ck"}
+icwr	CDN Marketing Screens	POST	uiuat.icreditworks.com	/api/v1/cdn	{"device_id": "UUID","deviceType": "MOBILE_LARGE","latitude": 44.968046,"longitude": -94.420307,"platform": "Android"}
+icwr	Global Variable	GET	uiuat.icreditworks.com	/api/v1/config/global/var/read
+icwr	iCW-Loan Quote	POST	uiuat.icreditworks.com	/api/v1/loan/quote	{"address": {"address1": "347 MainStreet","address2": "Apt 2","city": "Edison","state": "NJ","zipCode": "08880"},"amount": 590,"annualIncome": 55990,"authorizeText": true,"consentIds": [0],"dateOfBirth": "12/10/1955","firstName": "John","lastName": "Smith","mobile": 608333991,"ssn": "<myparam1>"}	random4
+icwr	iCW-Apply Loan Selection	POST	uiuat.icreditworks.com	/api/v1/loan/apply_loan_selection	{"loanId": <myparam1>,"loanOptionId": 1}	loanID
+icwr	iCW-User Registration	POST	uiuat.icreditworks.com	/api/v1/registration	{"consentIds":[0],"email":"email<myparam1>@fakegmail.com","password":"welcome","loanId":<myparam1>,"userId":<myparam1>}	loanID
+icwr	iCW-User Read Address	GET	uiuat.icreditworks.com	/api/v1/user/read/address
+icwr	iCW-User Income Education	PUT	uiuat.icreditworks.com	/api/v1/user/income_education	{"education":"Associate Degree","employed":true,"employer":{"employerName":"iCreditWorks LLC","workPhone":9809808998},"homeOwnerType":"Others","primaryIncomeType":"Pension","yearsLived":"1-2 years"}
+icwr	iCW-Long Form- User Summary	GET	uiuat.icreditworks.com	/api/v1/user/summary
+icwr	iCW-Treatment Types	GET	uiuat.icreditworks.com	/api/v1/treatment_types
+icwr	iCW-User Exact Loan Amount	POST	uiuat.icreditworks.com	/api/v1/user/exact/loan/amount	{"borrowedAmount": 500,"treatmentType": "Invisalign"}
+icwr	iCW-Summary Exact Loan Amount	GET	uiuat.icreditworks.com	/api/v1/user/exact/loan/amount
+icwr	iCW-DocuSign Contract	GET	uiuat.icreditworks.com	/api/v1/user/contract
+icwr	iCW-Chosen Provider	POST	uiuat.icreditworks.com	/api/v1/user/loan/chosen/provider	{"officeUUId":"1401a191-0b0b-11ea-a216-0ed941749c6d","providerUUId":"229f2916-8862-11e9-b453-1203934dc5d6"}
+icwr	iCW-My Dentist	POST	uiuat.icreditworks.com	/api/v1/user/my/dentist	{"latitude":40.543936,"longitude":-74.427}
+icwr	iCW-Post Login Loan Details	GET	uiuat.icreditworks.com	/api/v1/user/loan/details
+icwr	iCW-Post Login Loan Summary	GET	uiuat.icreditworks.com	/api/v1/user/loan/summary
+icwr	iCW-Articles	GET	uiuat.icreditworks.com	/api/v1/user/articles
+icwr	iCW-Post Feedback	POST	uiuat.icreditworks.com	/api/v1/user/feedback	{"feedbackRating": 3,"feedbackText": "very good"}
+icwr	iCW-Get FAQ's	GET	uiuat.icreditworks.com	/api/v1/faq
+icwr	iCW-Add Payment	POST	uiuat.icreditworks.com	/api/v1/user/addPayment	{"accountName": "John Keen","accountNumber": <myparam1>,"accountType": "Checking","address": {"address1": "347 MainStreet","address2": "Bld 2","city": "Edison","state": "NJ","zipCode": "08837"},"isDefaultPayment": true,"paymentSetupType": "ePayment","routingNumber": "021345678"}	random9
+ninwv	NW-New Auth Token	POST	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/token/new	{"clientId": "ICRE6be92554e4e64205b430479bf558168b","clientSecret": "74a81b585a58420aab808ae0ec378ecb"}
+ninwv	NW-Refresh Token	POST	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/token/refresh	{"clientId":"ICRE6be92554e4e64205b430479bf558168b","clientSecret":"74a81b585a58420aab808ae0ec378ecb"}
+ninwv	NW-Expire Token	POST	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/token/expire	{"clientId": "ICRE6be92554e4e64205b430479bf558168b","clientSecret": "74a81b585a58420aab808ae0ec378ecb"}
+ninwv	NW-Get New Token	POST	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/token/new	{"clientId": "ICRE6be92554e4e64205b430479bf558168b","clientSecret": "74a81b585a58420aab808ae0ec378ecb"}
+ninwv	NW-Get FI Name from Routing Number	GET	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/directory/finame?routingTransitNumber=026003379
+ninwv	NW-Get FI Profile from IDs	GET	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/directory/fiprofile?id=6093,3887
+ninwv	NW-Get FI Profile Components	GET	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/directory/fiprofile?id=4150,1061,3887&components=fiID,fiName,fiBrand,authModel
+ninwv	NW-Search for FI Profiles	POST	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/directory/search?q=santander
+ninwv	NW-Filtered Search for FI Profiles	POST	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/directory/search?q=Santander	{"capabilities":["banking"]}
+ninwv	NW-Limited Search for FI Profiles	POST	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/directory/search?q=american&limit=10
+ninwv	NW-Retrieve FI Profiles from IDs-SignInU&P	GET	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/directory/fiprofile?id=1061
+ninwv	NW-FI Sign In	POST	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/accounts	{"fiID": "1061","authParameters": [{"parameterID": "<myparam1>","parameterValue": "alfred@bat.com"},{"parameterID": "<myparam2>","parameterValue": "p3nnyw0r+h"}],"customer":{"name": {"firstName": "Alfred","lastName": "Pennyworth"},"email": "A<myparam3>@mymail.com"}}	paramID_1,paramID_2,random
+ninwv	NW-Sign In U&P OTP-FI Profile	GET	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/directory/fiprofile?id=6093
+ninwv	NW-Sign In U&P OTP Step-1	POST	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/accounts	{"fiID": "6093","authParameters": [{"parameterID": "<myparam1>","parameterValue": "otqmta"},{"parameterID": "<myparam2>","parameterValue": "otqmta"}],"customer": {"name": {"firstName": "Alfred","lastName": "Pennyworth"},"email": "b<myparam3>@fakegmail.com"}}	paramID_1,paramID_2,random
+ninwv	NW-Sign In U&P OTP Step-2	POST	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/accounts	{"fiID": 6093,"customerKey": "<myparam1>","mfaChallengeAnswers": [{"mfaChallengeID": "<myparam2>","mfaChallengeAnswer": {"optionType": "sms", "optionDisplay": "xxx-xxx-3863","optionValue": "Text"}}]}	customerKey,mfaChallengeID_1
+ninwv	NW-Sign In U&P OTP Step-3	POST	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/accounts	{"fiID": 6093,"customerKey": "<myparam1>","mfaChallengeAnswers": [{"mfaChallengeID": "<myparam2>","mfaChallengeAnswer": {"optionType": "text","optionValue": "88888888"}}]}	customerKey,mfaChallengeID_1
+ninwv	NW-Sign In Text Answer-FI Profile	GET	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/directory/fiprofile?id=3887
+ninwv	NW-Sign In Text Answer-Step 1	POST	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/accounts	{"fiID": "3887","authParameters": [{"parameterID": "<myparam1>","parameterValue": "check"},{"parameterID": "<myparam2>","parameterValue": "check"}],"customer": {"name": {"firstName": "Alfred","lastName": "Pennyworth"},"email": "P<myparam3>@fakegmail.com"}}	paramID_1,paramID_2,random
+ninwv	NW-Sign In Text Answer-Step 2	POST	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/accounts	{"fiID": 3887,"customerKey": "<myparam1>","mfaChallengeAnswers": [{"mfaChallengeID": "<myparam2>","mfaChallengeAnswer": {"optionType": "text","optionValue": "red"}},{"mfaChallengeID": "<myparam3>","mfaChallengeAnswer": {"optionType": "text","optionValue": "white"}}]}	customerKey,mfaChallengeID_1,mfaChallengeID_2
+ninwv	NW-Sign In Multiple Choice-FI Profile	GET	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/directory/fiprofile?id=3887
+ninwv	NW-Sign In Multiple Choice-Step 1	POST	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/accounts	{"fiID": "3887","authParameters": [{"parameterID": "<myparam1>","parameterValue": "2questions"},{"parameterID": "<myparam2>","parameterValue": "2questions"}],"customer": {"name": {"firstName": "Alfred","lastName": "Pennyworth"},"email": "P<myparam3>@fakegmail.com"}}	paramID_1,paramID_2,random
+ninwv	NW-Sign In Multiple Choice-Step 2	POST	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/accounts	{"fiID": 3887,"customerKey": "<myparam1>","mfaChallengeAnswers": [{"mfaChallengeID": "<myparam2>","mfaChallengeAnswer": {"optionType": "text","answerValue": "Mercedes","optionValue": "answer1_2"}},{"mfaChallengeID": "<myparam3>","mfaChallengeAnswer": {"optionType": "text","answerValue": "June","optionValue": "answer2_2"}}]}	customerKey,mfaChallengeID_1,mfaChallengeID_2
+ninwv	NW-Retrieve FI Profile from ID(s)-SignInU&P	GET	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/directory/fiprofile?id=1061
+ninwv	NW-FI Sign In Copy	POST	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/accounts	{"fiID": "1061","authParameters": [{"parameterID": "<myparam1>","parameterValue": "alfred@bat.com"},{"parameterID": "<myparam2>", "parameterValue": "p3nnyw0r+h"}],"customer": {"name": {"firstName": "Alfred","lastName": "Pennyworth"},"email": "N<myparam3>@fakegmail.com"}}	paramID_1,paramID_2,random
+ninwv	NW-Retrieve Eligible Use Cases	POST	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/usecases	{"fiID": 1061,"customerKey": "<myparam1>","depositAccount":[{"accountType": "<myparam2>","accountKey": "<myparam3>"}]}	customerKey,depositAccountType,depositAccountKey
+ninwv	NW-Authorize Data Access	POST	u1td1snglb.execute-api.us-east-1.amazonaws.com	/stg/authorize	{"fiID": 1061,"customerKey": "<myparam1>","depositAccount": [{ "accountKey": "<myparam2>","useCases": ["achPayments", "balance"]}]}	customerKey,depositAccountKey
